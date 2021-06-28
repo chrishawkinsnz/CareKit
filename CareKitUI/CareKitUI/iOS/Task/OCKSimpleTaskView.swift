@@ -75,7 +75,9 @@ open class OCKSimpleTaskView: OCKView, OCKTaskDisplayable {
     public weak var delegate: OCKTaskViewDelegate?
 
     /// A default version of an `OCKHeaderView`.
-    public let headerView = OCKHeaderView()
+    public let headerView = OCKHeaderView { config in
+        config.showsIconImage = true
+    }
 
     // MARK: Methods
 
